@@ -12,10 +12,11 @@
 		0390ACB922E3009B00F5EA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0390ACB822E3009B00F5EA9A /* Assets.xcassets */; };
 		0390ACBC22E3009B00F5EA9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0390ACBA22E3009B00F5EA9A /* Main.storyboard */; };
 		0390ACBF22E3009B00F5EA9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0390ACBE22E3009B00F5EA9A /* main.m */; };
+		0390ACC722E3108E00F5EA9A /* iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0390ACC622E3108E00F5EA9A /* iOS.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0390ACAF22E3009400F5EA9A /* CreatePlistFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreatePlistFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0390ACAF22E3009400F5EA9A /* iPlistBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlistBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0390ACB222E3009400F5EA9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0390ACB322E3009400F5EA9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0390ACB522E3009400F5EA9A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -25,6 +26,7 @@
 		0390ACBD22E3009B00F5EA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0390ACBE22E3009B00F5EA9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0390ACC022E3009B00F5EA9A /* CreatePlistFile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CreatePlistFile.entitlements; sourceTree = "<group>"; };
+		0390ACC622E3108E00F5EA9A /* iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iOS.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +51,7 @@
 		0390ACB022E3009400F5EA9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0390ACAF22E3009400F5EA9A /* CreatePlistFile.app */,
+				0390ACAF22E3009400F5EA9A /* iPlistBox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +61,7 @@
 			children = (
 				0390ACB222E3009400F5EA9A /* AppDelegate.h */,
 				0390ACB322E3009400F5EA9A /* AppDelegate.m */,
+				0390ACC622E3108E00F5EA9A /* iOS.plist */,
 				0390ACB522E3009400F5EA9A /* ViewController.h */,
 				0390ACB622E3009400F5EA9A /* ViewController.m */,
 				0390ACB822E3009B00F5EA9A /* Assets.xcassets */,
@@ -73,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0390ACAE22E3009400F5EA9A /* CreatePlistFile */ = {
+		0390ACAE22E3009400F5EA9A /* iPlistBox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0390ACC322E3009B00F5EA9A /* Build configuration list for PBXNativeTarget "CreatePlistFile" */;
+			buildConfigurationList = 0390ACC322E3009B00F5EA9A /* Build configuration list for PBXNativeTarget "iPlistBox" */;
 			buildPhases = (
 				0390ACAB22E3009400F5EA9A /* Sources */,
 				0390ACAC22E3009400F5EA9A /* Frameworks */,
@@ -85,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = CreatePlistFile;
+			name = iPlistBox;
 			productName = CreatePlistFile;
-			productReference = 0390ACAF22E3009400F5EA9A /* CreatePlistFile.app */;
+			productReference = 0390ACAF22E3009400F5EA9A /* iPlistBox.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,6 +104,11 @@
 				TargetAttributes = {
 					0390ACAE22E3009400F5EA9A = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -117,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0390ACAE22E3009400F5EA9A /* CreatePlistFile */,
+				0390ACAE22E3009400F5EA9A /* iPlistBox */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0390ACC722E3108E00F5EA9A /* iOS.plist in Resources */,
 				0390ACB922E3009B00F5EA9A /* Assets.xcassets in Resources */,
 				0390ACBC22E3009B00F5EA9A /* Main.storyboard in Resources */,
 			);
@@ -282,6 +291,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = ayxx.vip.com.CreatePlistFile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -299,6 +309,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = ayxx.vip.com.CreatePlistFile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -316,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0390ACC322E3009B00F5EA9A /* Build configuration list for PBXNativeTarget "CreatePlistFile" */ = {
+		0390ACC322E3009B00F5EA9A /* Build configuration list for PBXNativeTarget "iPlistBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0390ACC422E3009B00F5EA9A /* Debug */,
